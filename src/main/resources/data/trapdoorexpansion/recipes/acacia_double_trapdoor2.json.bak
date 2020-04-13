@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "trapdoorexpansion:acacia_double_trapdoor"
+    }
+  ],
+  "result": {
+    "item": "minecraft:acacia_trapdoor"
+  }
+}

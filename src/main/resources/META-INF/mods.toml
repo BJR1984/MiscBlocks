@@ -1,0 +1,28 @@
+modLoader="javafml"
+loaderVersion="[31,)"
+#issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]] #mandatory
+    modId="miscblocks"
+    version="${file.jarVersion}"
+    displayName="Misc Blocks"
+    # updateJSONURL="http://myurl.me/"
+    # displayURL="http://example.com/"
+    # logoFile="miscblocks.png"
+    # credits="BJR1984"
+    authors="BJR1984"
+    description=''' Trap doors that open half each way '''
+
+[[dependencies.miscblocks]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[31,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.miscblocks]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.2]"
+    ordering="NONE"
+    side="BOTH"

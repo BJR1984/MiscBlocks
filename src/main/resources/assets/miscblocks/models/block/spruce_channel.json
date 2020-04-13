@@ -1,0 +1,5 @@
+{	"parent": "miscblocks:block/parents/channel",
+	"textures": {
+		"texture": "block/spruce_planks"
+	}
+}

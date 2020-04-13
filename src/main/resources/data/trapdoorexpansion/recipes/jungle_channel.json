@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "# #",
+    "# #"
+  ],
+  "key": {
+    "#": {
+      "item": "minecraft:jungle_slab"
+    }
+  },
+  "result": {
+    "item": "miscblocks:jungle_channel",
+    "count": 6
+  }
+}

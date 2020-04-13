@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "trapdoorexpansion:oak_double_trapdoor"
+    }
+  ],
+  "result": {
+    "item": "minecraft:oak_trapdoor"
+  }
+}

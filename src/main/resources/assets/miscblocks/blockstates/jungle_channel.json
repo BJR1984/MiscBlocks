@@ -1,0 +1,8 @@
+{
+    "variants": {
+        "facing=north": { "model": "miscblocks:block/jungle_channel" },
+        "facing=south": { "model": "miscblocks:block/jungle_channel", "y": 180 },
+        "facing=west":  { "model": "miscblocks:block/jungle_channel", "y": 270 },
+        "facing=east":  { "model": "miscblocks:block/jungle_channel", "y": 90 }
+    }
+}

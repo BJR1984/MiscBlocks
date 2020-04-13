@@ -1,0 +1,7 @@
+{
+	"parent": "miscblocks:block/parents/channel",
+	"textures": {
+		"texture": "block/birch_planks",
+		"particle": "block/birch_planks"
+	}
+}

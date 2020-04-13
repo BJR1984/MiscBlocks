@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {
+      "item": "minecraft:spruce_trapdoor"
+    }
+  ],
+  "result": {
+    "item": "trapdoorexpansion:spruce_double_trapdoor"
+  }
+}

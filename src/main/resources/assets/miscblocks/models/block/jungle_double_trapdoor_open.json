@@ -1,0 +1,5 @@
+{	"parent": "miscblocks:block/parents/double_trapdoor_open",
+	"textures": {
+		"texture": "miscblocks:block/jungle_double_trapdoor"
+	}
+}
