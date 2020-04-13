@@ -44,11 +44,8 @@ public class MiscBlocks
 
         private void doClientStuff(final FMLClientSetupEvent event) {
             RenderTypeLookup.setRenderLayer(BlockInit.OAK_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(BlockInit.BIRCH_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(BlockInit.SPRUCE_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(BlockInit.ACACIA_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
             RenderTypeLookup.setRenderLayer(BlockInit.JUNGLE_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
-            RenderTypeLookup.setRenderLayer(BlockInit.DARK_OAK_DOUBLE_TRAPDOOR_BLOCK.get(), RenderType.getCutout());
         }
 
         @SubscribeEvent
