@@ -4,8 +4,8 @@ import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.entity.EntityType;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.fluid.FluidState;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.fluid.IFluidState;
 import net.minecraft.item.BlockItemUseContext;
 import net.minecraft.pathfinding.PathType;
 import net.minecraft.state.BooleanProperty;
@@ -90,7 +90,7 @@ public class DoubleTrapDoorBlock extends TrapDoorBlock {
         if (this.material == Material.IRON) {
             return ActionResultType.PASS;
         } else {
-            state = state.cycle(OPEN);
+            state = state.func_235896_a_(OPEN);
             worldIn.setBlockState(pos, state, 2);
             if (state.get(WATERLOGGED)) {
                 worldIn.getPendingFluidTicks().scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickRate(worldIn));
@@ -132,7 +132,7 @@ public class DoubleTrapDoorBlock extends TrapDoorBlock {
 
     public BlockState getStateForPlacement(BlockItemUseContext context) {
         BlockState blockstate = this.getDefaultState();
-        IFluidState ifluidstate = context.getWorld().getFluidState(context.getPos());
+        FluidState fluidstate = context.getWorld().getFluidState(context.getPos());
         Direction direction = context.getFace();
         if (!context.replacingClickedOnBlock() && direction.getAxis().isHorizontal()) {
             blockstate = blockstate.with(HORIZONTAL_FACING, direction).with(HALF, context.getHitVec().y - (double)context.getPos().getY() > 0.5D ? Half.TOP : Half.BOTTOM);
@@ -144,14 +144,14 @@ public class DoubleTrapDoorBlock extends TrapDoorBlock {
             blockstate = blockstate.with(OPEN, Boolean.valueOf(true)).with(POWERED, Boolean.valueOf(true));
         }
 
-        return blockstate.with(WATERLOGGED, Boolean.valueOf(ifluidstate.getFluid() == Fluids.WATER));
+        return blockstate.with(WATERLOGGED, Boolean.valueOf(fluidstate.getFluid() == Fluids.WATER));
     }
 
     protected void fillStateContainer(StateContainer.Builder<Block, BlockState> builder) {
         builder.add(HORIZONTAL_FACING, OPEN, HALF, POWERED, WATERLOGGED);
     }
 
-    public IFluidState getFluidState(BlockState state) {
+    public FluidState getFluidState(BlockState state) {
         return state.get(WATERLOGGED) ? Fluids.WATER.getStillFluidState(false) : super.getFluidState(state);
     }
 

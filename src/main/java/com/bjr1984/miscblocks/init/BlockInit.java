@@ -13,7 +13,7 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class BlockInit {
 
     // Blocks
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MiscBlocks.MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MiscBlocks.MODID);
 
     public static final RegistryObject<TrapDoorBlock> OAK_DOUBLE_TRAPDOOR_BLOCK = BLOCKS.register("oak_double_trapdoor", () -> new DoubleTrapDoorBlock(Block.Properties.from(Blocks.OAK_TRAPDOOR)));
     public static final RegistryObject<TrapDoorBlock> SPRUCE_DOUBLE_TRAPDOOR_BLOCK = BLOCKS.register("spruce_double_trapdoor", () -> new DoubleTrapDoorBlock(Block.Properties.from(Blocks.SPRUCE_TRAPDOOR)));
